@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { FaHtml5, FaNode, FaSquareGit, FaReact, FaFigma, FaGithub, FaNpm } from "react-icons/fa6";
+import { FaHtml5, FaNode, FaSquareGit, FaReact, FaFigma, FaNpm } from "react-icons/fa6";
 import { FaCss3Alt } from "react-icons/fa";
 import { SiJavascript, SiMongodb, SiExpress } from "react-icons/si";
 
@@ -38,8 +38,7 @@ export default function About() {
         <SiMongodb />
         <SiExpress />
         <FaSquareGit />
-        <FaGithub />
-        <FaFigma />
+=       <FaFigma />
       </div>
     </div>
     </div>

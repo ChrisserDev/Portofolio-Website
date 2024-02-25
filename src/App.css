@@ -246,8 +246,8 @@ a {
 .projects-container{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
-  margin: 0 12em 4em 12em;
+  gap: 50px 80px;
+  margin: 0 10em 4em 10em;
 
 }
 
@@ -270,12 +270,11 @@ a {
 }
 
 .project-card img {
-  width: 510px;
+  width: 520px;
   height: 260px;
   border-radius: 8px;
   margin-bottom: .8em;
   transition: transform 0.3s ease-in-out;
-  cursor: pointer;
 }
 
 .overlay {
@@ -293,6 +292,7 @@ a {
   transition: opacity 0.3s ease-in-out;
   border-radius: 8px;
   border: 1px solid #fff;
+  cursor: pointer;
 }
 
 
@@ -350,11 +350,50 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: .6em;
 }
 
 .project-links {
   display: flex;
-  gap: 20px;
+  gap: 10px;
   width: 190px;
 }
 
+.project-links > a {
+  background: linear-gradient(40deg, #ffcc00 10%, #ff6666);
+  padding: .2em;
+  border-radius: 8px;
+  color: #494646;
+}
+
+.project-links a:hover {
+  color: #f1f1f1;
+  text-decoration: underline;
+}
+
+.projects-stack {
+  display: flex;
+  gap: 20px;
+}
+
+.projects-stack > p{
+  background: linear-gradient(40deg, #ffcc00, #ff6666);
+  color: #494646;
+  padding: .2em .5em;
+  border-radius: 8px;
+  margin-top: .8em;
+}
+
+.project-page { 
+  display: flex;
+  margin: 2em;
+}
+
+.project-page-image {
+  width: 50%;
+  border-radius: 8px;
+}
+
+.modal-project {
+  color: black;
+}
