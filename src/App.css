@@ -4,38 +4,23 @@
   box-sizing: border-box;
 }
 
-#root {
-  
-}
-
 html, body {
   font-family: "Quicksand", sans-serif;
   background: url('./assets/bg1.jpg');
   background-size: cover;
-  /* background-position: center; */
+  background-position: center;
   color: white;
   min-height: 100vh;
+  /* background-color: #0e0d0d49; */
 }
-
-/* .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-} */
 
 /* HEADER STYLING */
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+  /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+  background-color: #2a2a2a; */
   padding: .5em 2em;
 }
 
@@ -48,7 +33,6 @@ html, body {
 
 .nav-container {
   display: flex;
-  background-color: #2a2a2a;
   border-radius: 8px;
 }
 
@@ -56,11 +40,11 @@ html, body {
   padding: .5em 1.4em;
   color: #fff; 
   text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: color 0.3s ease, color 0.3s ease;
 }
 
 .nav-container > a:hover {
-  background-color: #646464;
+  color: #646464;
 }
 
 .nav-container a:first-child:hover {
@@ -220,7 +204,6 @@ a {
   background-color: white;
   cursor: pointer;
   margin: .5em 0 0 14.5em;
-  padding: .5em;
 }
 
 .about > button:hover {
@@ -235,12 +218,23 @@ a {
   background-color: #2a2a2a;
 }
 
-.stack{
+.stack > section > svg {
+  font-size: 2rem;
+  align-content: center;
+}
+
+.stack {
   display: flex;
   justify-content: center;
-  font-size: 3rem;
   margin: 1em 0;
-  gap: 20px;
+  gap: 40px;
+}
+
+.stack > section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .projects-container{
@@ -305,45 +299,11 @@ a {
   opacity: 1;
 }
 
-.form-container {
-  display: flex;
-  flex-direction: column;
-  margin: 3em auto;
+.contact-container {
+  
+  text-align: center;
   background-color: #2a2a2ada;
-  width: 500px;
-  padding: 1em;
-  border-radius: 8px;
-  font-size: 1.2rem;
-  gap: 25px;
-}
 
-.form-container > section > input {
-  width: 465px;
-  height: 30px;
-}
-
-.form-container > section > input, 
-.form-container > section > textarea {
-  border-radius: 4px;
-  border: none;
-  margin-top: .5em;
-  padding: .5em;
-}
-
-
-.fixed-textarea {
-  resize: none;
-}
-
-.form-container > button {
-  color: #2a2a2a;
-  background-color: white;
-  font-size: 1.4rem;
-  padding: .2em .5em;
-  border-radius: 8px;
-  margin: 0 auto .8em auto;
-  cursor: pointer;
-  border: none;
 }
 
 .project-card-top {
@@ -394,6 +354,130 @@ a {
   border-radius: 8px;
 }
 
+.features > p{
+  padding: .2em 0 1em 0;
+  line-height: 1.5em;
+}
+
+.features > h4, .modal-project > h2 {
+  background-image: linear-gradient(40deg, #ffcc00, #ff6666);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 .modal-project {
-  color: black;
+  position: relative;
+  background-color: #2a2a2a;
+  padding: 0 1em;
+}
+
+.modal-project > h2 {
+  text-align: center;
+  padding: 1em 0;
+}
+
+.close-modal {
+  position: absolute;
+  top: 2%;
+  left: 95%;
+  font-size: 1.6rem;
+  background-color: transparent;
+  border: none;
+  color: white;
+  z-index: 1;
+}
+
+.close-modal:hover {
+  cursor: pointer;
+  color: #adadad;
+}
+
+@media (max-width: 768px){
+
+  .projects-container {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 1em 4em 4em 4em;
+  }
+
+  .about > p {
+    padding: 2em 4em;
+  }
+
+  .stack {
+    margin: 1em 4em;
+    flex-wrap: wrap;
+  }
+
+  .about > button {
+    margin: .5em 5.5em;
+  }
+
+  .homePage-container > img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .introduction {
+    font-size: 1.5rem;
+  }
+
+  .introduction > a{
+    font-size: 1rem;
+  }
+ 
+  .overlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 245px;
+  }
+}
+
+@media (max-width: 768px){
+
+  .homePage-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .homePage-container > img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+
+  .introduction {
+    padding-bottom: 0;
+  }
+
+  .about > p {
+    font-size: 1rem;
+    padding: 2em;
+  }
+
+  .about > button {
+    margin: 0 2.4em;
+  }
+
+  .stack {
+    margin: 2em 1.6em;
+  }
+
+  .projects-container {
+    display: flex;
+    flex-direction: column;
+    margin: 1em 2em;
+  }
+
+  .projects-stack {
+    flex-wrap: wrap;
+  }
+
+  .project-links {
+    width: 145px;
+  }
+  
+  .project-links > a {    
+    font-size: 1rem;
+  }
 }

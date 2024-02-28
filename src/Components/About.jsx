@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import { FaHtml5, FaNode, FaSquareGit, FaReact, FaFigma, FaNpm } from "react-icons/fa6";
-import { FaCss3Alt } from "react-icons/fa";
+import { FaHtml5, FaNode, FaReact, FaFigma, FaNpm } from "react-icons/fa6";
+import { FaCss3Alt, FaGitAlt } from "react-icons/fa";
 import { SiJavascript, SiMongodb, SiExpress } from "react-icons/si";
+import { DiVisualstudio } from "react-icons/di";
 
 export default function About() {
 
@@ -29,16 +30,50 @@ export default function About() {
     <div className='skills'>
       <h1>Tech Stack</h1>
       <div className='stack'>
-        <FaHtml5 />
-        <FaCss3Alt />
-        <SiJavascript />
-        <FaReact />
-        <FaNpm />
-        <FaNode />
-        <SiMongodb />
-        <SiExpress />
-        <FaSquareGit />
-=       <FaFigma />
+        <section>
+          <FaHtml5/>
+          <h5>HTML</h5>
+        </section>
+        <section>
+          <FaCss3Alt/>
+          <h5>CSS</h5>
+        </section>
+        <section>
+          <SiJavascript/>
+          <h5>JavaScript</h5>
+        </section>
+        <section>      
+          <FaReact/>
+          <h5>React</h5>
+        </section>
+        <section>
+          <FaNode/>
+          <h5>Node.JS</h5>
+        </section>
+        <section>
+          <SiMongodb/>
+          <h5>MongoDB</h5>
+        </section>
+        <section>
+          <SiExpress/>
+          <h5>Express.JS</h5>
+        </section>
+        <section>
+          <FaGitAlt/>
+          <h5>GIT</h5>
+        </section>
+        <section>
+          <FaFigma/>
+          <h5>Figma</h5>
+        </section>
+        <section>
+          <FaNpm/>
+          <h5>Node Package Manager</h5>
+        </section>
+        <section>
+          <DiVisualstudio />
+          <h5>Visual Studio</h5>
+        </section>
       </div>
     </div>
     </div>

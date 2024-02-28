@@ -40,11 +40,12 @@ export default function Work() {
       left: '50%',
       right: 'auto',
       bottom: 'auto',
-      marginRight: '-50%',
+      boxShadow: '0 0 20px rgb(55, 54, 54)',
       transform: 'translate(-50%, -50%)',
+      padding: '0'
     },
     overlay: {
-      backgroundColor: 'rgba(0, 0, 0, 0.4)'
+      backgroundColor: 'rgba(0, 0, 0, 0.8)'
     }
   };
 
@@ -57,7 +58,7 @@ export default function Work() {
             displayProjects.map(project => {
               return (
                 <div key={project._id} className='project-card'> 
-                        <img src={project.image}/>
+                        <img src={project?.image} alt={project?.title}/>
                         <button className='overlay' onClick={() => openModal(project)}>See more...</button>
                           <section className='project-card-top'>
                             <h2>{project?.title}</h2>
@@ -82,18 +83,19 @@ export default function Work() {
         onRequestClose={() => setIsOpen(false)}
         style={customStyles}
       >
-        <button onClick={() => setIsOpen(false)}>X</button>
+        <button onClick={() => setIsOpen(false)} className='close-modal'>X</button>
         <div className='modal-project'>
-          <h2>{showProject?.title}</h2>
-          <p>{showProject?.description}</p>
-          {/* <div className='projects-stack'>
-            {showProject?.stack.map((tech, index) => (
-              <p key={index}>{tech}</p>
+          <h2>Key features of the {showProject?.title} project</h2>
+          <div>
+          {Array.isArray(showProject?.features) && showProject?.features.map((feature, index) => (
+              <section key={index} className='features'>
+                <h4>{feature.title}</h4>
+                <p>{feature.description}</p>
+              </section>
             ))}
-          </div> */}
+          </div>
         </div>
       </Modal>
     </>
   )
 }
-

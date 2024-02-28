@@ -1,9 +1,11 @@
+/* eslint-disable no-undef */
 require('dotenv').config()
 const express = require('express')
 const app = express();
 const mongoose = require('mongoose');
 const cors = require('cors')
 const ProjectsModel = require('./projectModel.js')
+// const ContactModel = require('./contactModel.js')
 
 
 //Using cors
@@ -23,7 +25,7 @@ app.get('/allprojects', async (req, res) => {
     }
 });
 
-// Get a single vehicle
+// Get a single project
 app.get('/allprojects/:id', async (req, res) => {
     const { id } = req.params
         
@@ -37,6 +39,18 @@ app.get('/allprojects/:id', async (req, res) => {
         }
             res.status(200).json(project)
     })
+
+//Post the contact details from the form.
+// app.post('/contactdata', async (req, res) => {
+//     try {
+//       const newData = new ContactModel(req.body);
+//       const savedData = await newData.save();
+//       res.status(201).json(savedData);
+//     } catch (error) {
+//       res.status(400).json({ message: error.message });
+//     }
+//   });
+
     
 mongoose.connect(process.env.MONGO_URI)
     .then(() => {
