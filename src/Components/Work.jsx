@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Link, useParams } from 'react-router-dom';
+import { ImNewTab } from "react-icons/im";
 import Modal from 'react-modal'
 
 
@@ -42,7 +43,8 @@ export default function Work() {
       bottom: 'auto',
       boxShadow: '0 0 20px rgb(55, 54, 54)',
       transform: 'translate(-50%, -50%)',
-      padding: '0'
+      padding: '0',
+      width: '50%',
     },
     overlay: {
       backgroundColor: 'rgba(0, 0, 0, 0.8)'
@@ -59,12 +61,12 @@ export default function Work() {
               return (
                 <div key={project._id} className='project-card'> 
                         <img src={project?.image} alt={project?.title}/>
-                        <button className='overlay' onClick={() => openModal(project)}>See more...</button>
+                        <button className='overlay' onClick={() => openModal(project)}>See more <ImNewTab /></button>
                           <section className='project-card-top'>
                             <h2>{project?.title}</h2>
                             <section className='project-links'>
                               <Link to={project?.github} target='_blank'>Github</Link>
-                              <Link to={project?.liveapp} target='_blank'>Deployed</Link>
+                              <Link to={project?.liveapp} target='_blank'>View Live</Link>
                             </section>
                           </section>
                           <p>{project?.description}</p>
