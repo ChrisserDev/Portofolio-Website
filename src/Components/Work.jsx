@@ -4,7 +4,6 @@ import { ImNewTab } from "react-icons/im";
 import Modal from 'react-modal'
 import axios from 'axios'
 
-
 export default function Work() {
   Modal.setAppElement(document.getElementById('root'));
   const [isOpen, setIsOpen] = useState(false)

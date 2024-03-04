@@ -217,7 +217,7 @@ a {
 .project-details {
   display: flex;
   flex-direction: column;
-  height: 250px;
+  height: fit-content;
   justify-content: space-around; 
 }
 
@@ -432,7 +432,7 @@ a {
 }
 
 .scroll-text {
-  font-size: 14px;
+  font-size: .8rem;
 }
 
 @media (max-width: 768px){
@@ -573,6 +573,10 @@ a {
     gap: 10px;
   }
   
+  .project-card-top > h2 {
+    font-size: 1rem;
+  }
+  
   .project-card {
     display: flex;
     flex-direction: column;
@@ -591,7 +595,7 @@ a {
 
   .projects-stack {
     flex-wrap: wrap;
-    padding: 0 .7em 1em .7em;
+    padding: 1em .7em 1em .7em;
   }
 
   .project-links {
@@ -604,6 +608,54 @@ a {
 
   .overlay {
     height: 200px;
+  }
+
+    /* HAMBURGER MENU */
+
+  .menu-button {
+    display: block;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+  }
+  
+  .homePage-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .menu {
+    display: flex;
+    flex-direction: column;
+    width: 0;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #0c1821;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 2em;
+    z-index: 1;
+  }
+  
+  .menu a {
+    padding: 1.5em;
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    transition: 0.3s;
+    display: block;
+  }
+  
+  .menu a:hover {
+    color: #b0afaf;
+  }
+  
+  .menu.open {
+    width: 50%;
   }
 }
 
@@ -630,53 +682,5 @@ a {
 
   .social-links > a {
     font-size: 3rem;
-  }
-
-  /* HAMBURGER MENU */
-
-  .menu-button {
-    display: block;
-    cursor: pointer;
-    background-color: transparent;
-    color: white;
-    border: none;
-    font-size: 1.5rem;
-  }
-
-  .homePage-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .menu {
-    display: flex;
-    flex-direction: column;
-    width: 0;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #0C1821;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 2em;
-    z-index: 1;
-  }
-
-  .menu a {
-    padding: 1.5em;
-    text-decoration: none;
-    font-size: 1rem;
-    color: white;
-    transition: 0.3s;
-    display: block;
-  }
-
-  .menu a:hover {
-    background-color: #b0afaf;
-  }
-
-  .menu.open {
-    width: 50%;
   }
 }

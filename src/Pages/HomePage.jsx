@@ -6,6 +6,7 @@ import About from '../Components/About';
 import Work from '../Components/Work';
 import myself from '../assets/portfolio-cover2.jpeg';
 import ScrollEffect from '../Components/ScrollEffect';
+import '../App.css'
 
 
 export default function HomePage() {
