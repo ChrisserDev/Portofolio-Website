@@ -11,7 +11,7 @@ export default function Work() {
   const [showProject, setShowProject] = useState({})
 
   useEffect(() => {
-      axios.get(`http://localhost:3000/allprojects`)
+      axios.get(`https://portofolio-website-3.onrender.com/allprojects`)
       .then(response => {
           setDisplayProjects(response.data);
       })
