@@ -10,7 +10,6 @@ import ScrollEffect from '../Components/ScrollEffect';
 
 export default function HomePage() {
 
-  //Initializing state for the hamburger menu.
   const [isOpen, setIsOpen] = useState(false);
 
   return (
