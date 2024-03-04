@@ -4,7 +4,9 @@ import { PiCoffeeLight } from "react-icons/pi";
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import About from '../Components/About';
 import Work from '../Components/Work';
-import myself from '../assets/myself.jpg';
+import myself from '../assets/portfolio-cover2.jpeg';
+import ScrollEffect from '../Components/ScrollEffect';
+
 
 export default function HomePage() {
 
@@ -25,13 +27,14 @@ export default function HomePage() {
             </div>
           </nav>
         </div>
+       <ScrollEffect />
         <div className='homePage-container'>
           <section className='introduction'>
             <p>Howdy, my name is</p>
             <h1>CRISTIAN SERBAN</h1>
             <p>Front End Developer based in London.</p>
             <Link to="projects" smooth={true} duration={500}>Browse Projects</Link>
-            <a href="https://brittanychiang.com/resume.pdf" target='_blank' rel="noopener noreferrer">Resume</a>
+            <a href="" target='_blank' rel="noopener noreferrer">Resume</a>
           </section>
           <img src={myself} alt="Cristian Serban"/>
         </div>
