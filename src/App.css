@@ -152,7 +152,7 @@ a {
 .about > h1, .skills > h1, .projects-container-title {
   background-image: linear-gradient(40deg, #ffcc00, #ff6666);
   filter: brightness(90%);
-  color: rgb(56, 53, 53);
+  color: rgb(16, 15, 15);
 }
 
 .about > button { 

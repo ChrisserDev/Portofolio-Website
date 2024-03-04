@@ -11,7 +11,6 @@ export default function Work() {
   const [displayProjects, setDisplayProjects] = useState([])
   const [showProject, setShowProject] = useState({})
 
-  //Fething data from my database
   useEffect(() => {
       axios.get(`http://localhost:3000/allprojects`)
       .then(response => {
