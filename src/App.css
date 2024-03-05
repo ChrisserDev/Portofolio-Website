@@ -217,8 +217,8 @@ a {
 .project-details {
   display: flex;
   flex-direction: column;
-  height: fit-content;
-  justify-content: space-around; 
+  height: 220px;
+  justify-content: space-around;
 }
 
 .project-details > p {
@@ -569,7 +569,7 @@ a {
   }
 
   .projects-container {
-    margin: 1em; 
+    margin: 1em .5em; 
     gap: 10px;
   }
   
@@ -581,12 +581,16 @@ a {
     display: flex;
     flex-direction: column;
     margin: 1em;
-    width: 350px;
+    width: 330px;
   }
 
   .project-card img {
-    width: 350px;
+    width: 330px;
     height: 200px;
+  }
+
+  .project-details {
+    height: 300px;
   }
 
   .project-details > p {
@@ -608,6 +612,7 @@ a {
 
   .overlay {
     height: 200px;
+    width: 330px;
   }
 
     /* HAMBURGER MENU */
