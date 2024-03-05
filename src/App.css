@@ -523,6 +523,7 @@ a {
 
   .introduction {
     padding: 0 2em;
+    font-size: 1rem;
   }
 
   .about > p {
@@ -569,7 +570,7 @@ a {
   }
 
   .projects-container {
-    margin: 1em .5em; 
+    margin: 1em 1.5em; 
     gap: 10px;
   }
   
@@ -581,11 +582,11 @@ a {
     display: flex;
     flex-direction: column;
     margin: 1em;
-    width: 330px;
+    width: 350px;
   }
 
   .project-card img {
-    width: 330px;
+    width: 350px;
     height: 200px;
   }
 
@@ -612,7 +613,7 @@ a {
 
   .overlay {
     height: 200px;
-    width: 330px;
+    width: 350px;
   }
 
     /* HAMBURGER MENU */
@@ -661,6 +662,33 @@ a {
   
   .menu.open {
     width: 50%;
+  }
+
+  .scroll-text, .mouse-icon {
+    font-size: .6rem;
+  }
+
+  .introduction > a:nth-child(4), .introduction > a:nth-child(5) {
+    font-size: .8rem;
+  }
+}
+
+@media (max-width: 385px){
+
+  .project-card img, .project-card, .overlay {
+    width: 320px;
+  }
+
+  .projects-container, .projects-container-title {
+    margin: 1em;
+  }
+
+  .projects-stack > p {
+    font-size: .8rem;
+  }
+
+  .introduction > a:nth-child(5) {
+    margin-left: 1.4em;
   }
 }
 
