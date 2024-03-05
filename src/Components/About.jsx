@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { FaHtml5, FaNode, FaReact, FaFigma, FaNpm } from "react-icons/fa6";
 import { FaCss3Alt, FaGitAlt } from "react-icons/fa";
 import { SiJavascript, SiMongodb, SiExpress } from "react-icons/si";
-import { DiVisualstudio } from "react-icons/di";
 
 export default function About() {
 
@@ -72,10 +71,6 @@ export default function About() {
           <section>
             <FaNpm/>
             <h5>Node Package Manager</h5>
-          </section>
-          <section>
-            <DiVisualstudio />
-            <h5>Visual Studio</h5>
           </section>
         </div>
       </div>
