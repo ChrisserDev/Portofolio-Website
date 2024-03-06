@@ -34,7 +34,7 @@ export default function HomePage() {
             <h1>CRISTIAN SERBAN</h1>
             <p>Front End Developer based in London.</p>
             <Link to="projects" smooth={true} duration={500}>Browse Projects</Link>
-            <a href="" target='_blank' rel="noopener noreferrer">Resume</a>
+            <a href="file:///C:/Users/maria/OneDrive/Documents/Cristian%20Serban%20CV.pdf" target='_blank' rel="noopener noreferrer">Resume</a>
           </section>
           <img src={myself} alt="Cristian Serban"/>
         </div>
