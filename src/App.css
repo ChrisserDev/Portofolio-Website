@@ -683,6 +683,15 @@ a {
     margin: 1em;
   }
 
+  .project-card-top{
+    padding: .5em;
+    font-size: .6rem;
+  }
+
+  .project-links{
+    width: 146px;
+  }
+
   .projects-stack  > p {
     font-size: .8rem;
   }
