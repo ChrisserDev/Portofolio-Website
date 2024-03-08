@@ -34,7 +34,7 @@ export default function Work() {
       boxShadow: '0 0 20px rgb(55, 54, 54)',
       transform: 'translate(-50%, -50%)',
       padding: '0',
-      width: '50%',
+      width: '75%',
     },
     overlay: {
       backgroundColor: 'rgba(0, 0, 0, 0.8)'
