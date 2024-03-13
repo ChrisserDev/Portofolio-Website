@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { FaHtml5, FaNode, FaReact, FaFigma, FaNpm } from "react-icons/fa6";
 import { FaCss3Alt, FaGitAlt } from "react-icons/fa";
-import { SiJavascript, SiMongodb, SiExpress } from "react-icons/si";
+import { SiJavascript, SiMongodb, SiExpress, SiPostman } from "react-icons/si";
 
 export default function About() {
 
@@ -59,6 +59,10 @@ export default function About() {
           <section>
             <SiExpress/>
             <h5>Express.JS</h5>
+          </section>
+          <section>
+            <SiPostman/>
+            <h5>Postman</h5>
           </section>
           <section>
             <FaGitAlt/>
