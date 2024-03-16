@@ -34,9 +34,9 @@ export default function HomePage() {
             <h1>CRISTIAN SERBAN</h1>
             <p>Front End Developer based in London.</p>
             <Link to="projects" smooth={true} duration={500}>Browse Projects</Link>
-            <a href="https://www.dropbox.com/scl/fi/nv3ivnrmid0038qti86lg/Cristian-Serban-CV.pdf?rlkey=utayt438bl7jaqlao298fwj9h&dl=0" target='_blank' rel="noopener noreferrer">Resume</a>
+            <a href="https://www.dropbox.com/scl/fi/nv3ivnrmid0038qti86lg/Cristian-Serban-CV.pdf?rlkey=utayt438bl7jaqlao298fwj9h&dl=0" target='_blank' rel="noopener noreferrer" aria-label='Link to Cristian Resume.'>Resume</a>
           </section>
-          <img src={myself} alt="Cristian Serban"/>
+          <img src={myself} alt="Image of Cristian Serban"/>
         </div>
       </div>
       <Element name='about'>
