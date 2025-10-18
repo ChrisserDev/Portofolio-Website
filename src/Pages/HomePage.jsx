@@ -8,7 +8,6 @@ import myself from '../assets/portfolio-cover2.jpeg';
 import ScrollEffect from '../Components/ScrollEffect';
 import '../App.css'
 
-
 export default function HomePage() {
 
   const [isOpen, setIsOpen] = useState(false);
@@ -30,11 +29,16 @@ export default function HomePage() {
        <ScrollEffect />
         <div className='homePage-container'>
           <section className='introduction'>
-            <p>Howdy, my name is</p>
-            <h1>CRISTIAN SERBAN</h1>
-            <p>Front End Developer based in London.</p>
-            <Link to="projects" smooth={true} duration={500}>Browse Projects</Link>
-            <a href="https://www.dropbox.com/scl/fi/nv3ivnrmid0038qti86lg/Cristian-Serban-CV.pdf?rlkey=utayt438bl7jaqlao298fwj9h&dl=0" target='_blank' rel="noopener noreferrer" aria-label='Link to Cristian Resume.'>Resume</a>
+          <h1>Hi, I'm</h1>
+          <h1>Cristian Serban</h1>
+          <h3>Full Stack Developer</h3>
+          <p className='home-page-description'>
+            I'm a Full-Stack Developer, currently working with <span className='desc-skill'>JavaScript</span>, <span className='desc-skill'>TypeScript</span>, <span className='desc-skill'>CSS/SASS</span>, <span className='desc-skill'>React</span>, <span className='desc-skill'>Node.js</span>, <span className='desc-skill'>SQL</span>, <span className='desc-skill'>GraphQL</span>, and <span className='desc-skill'>GCP</span>. My toolkit also includes <span className='desc-skill'>Git/GitHub</span>, <span className='desc-skill'>Github Actions</span>, testing <span className='desc-skill'>(Jest & Playwright)</span>, and modern build tools <span className='desc-skill'>(Webpack)</span>. <br/>  <br/>
+            Right now, I'm diving into  <span className='desc-skill'>Next.js</span> and learning how to layer <span className='desc-skill'>TypeScript</span> more effectively across my projects. <br/><br/>
+            If you'd like to see what I've been working on, follow my work log on <span><a className='github-link desc-skill' href="https://github.com/ChrisserDev" target='_blank' aria-label="Link to my personal Github profile" title="Link to my personal Github profile">Github</a></span> and updates on <span><a className='linkedin-link desc-skill' href="https://www.linkedin.com/in/cristianserban24/"  target='_blank' aria-label="Link to my personal Linkedin profile" title="Link to my personal Linkedin profile">LinkedIn</a></span> where I share progress, small wins, and experiments as I keep building and learning.
+          </p>
+          <Link to="projects" smooth={true} duration={500}>Browse Projects</Link>
+          <a className='resume-link' href="https://drive.google.com/file/d/1ijLlXDrzKpz0wfh1-bffzbGKtuxrDd4-/view?usp=sharing" target='_blank' rel="noopener noreferrer" aria-label='Link to Cristian Resume.'>Resume</a>
           </section>
           <img src={myself} alt="Image of Cristian Serban"/>
         </div>
@@ -60,7 +64,7 @@ export default function HomePage() {
       </div>
       </Element>
       <div className='footer-container'>
-        <h4>© Copyright 2024. By Cristian Serban</h4>
+        <h4>© Copyright 2025. Cristian Serban</h4>
       </div>
     </>
   )}

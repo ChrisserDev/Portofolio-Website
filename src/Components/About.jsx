@@ -1,83 +1,132 @@
-import React, { useState, useEffect } from 'react'
-import { FaHtml5, FaNode, FaReact, FaFigma, FaNpm } from "react-icons/fa6";
-import { FaCss3Alt, FaGitAlt } from "react-icons/fa";
-import { SiJavascript, SiMongodb, SiExpress, SiPostman } from "react-icons/si";
+
+import htmlLogo from '../assets/skills_logos/html_logo.png';
+import cssLogo from '../assets/skills_logos/css_logo.png';
+import sassLogo from '../assets/skills_logos/sass_logo.png';
+import jsLogo from '../assets/skills_logos/javascript_logo.png';
+import tsLogo from '../assets/skills_logos/typescript_logo.png';
+import jqueryLogo from '../assets/skills_logos/jquery_logo.png';
+import reactLogo from '../assets/skills_logos/react_logo.png';
+import nodeLogo from '../assets/skills_logos/nodejs_logo.png';
+import expressLogo from '../assets/skills_logos/expressjs_logo.png';
+import nextLogo from '../assets/skills_logos/nextjs_logo.png';
+import handlebarsLogo from '../assets/skills_logos/handlebars_logo.png';
+import mongoLogo from '../assets/skills_logos/mongodb_logo.png';
+import graphqlLogo from '../assets/skills_logos/graphql_logo.png';
+import sqlLogo from '../assets/skills_logos/sql_logo.png';
+import gcpLogo from '../assets/skills_logos/gcp_logo.png';
+import postmanLogo from '../assets/skills_logos/postman_logo.png';
+import playwrightLogo from '../assets/skills_logos/playwright.png';
+import jestLogo from '../assets/skills_logos/jest_logo.png';
+import figmaLogo from '../assets/skills_logos/figma_logo.png';
+import adobeXdLogo from '../assets/skills_logos/adobe_xd.png';
+import gitLogo from '../assets/skills_logos/git_logo.png';
+import githubLogo from '../assets/skills_logos/github_logo.png';
+import viteLogo from '../assets/skills_logos/vite_logo.png';
+import webpackLogo from '../assets/skills_logos/webpack_logo.png';
 
 export default function About() {
 
-  // Initializing state for the paragraph button dropdown.
-  const [isOpen, setIsOpen] = useState(false);
-
-  //Styling for the paragraph dropdown.
-  const paragraphStyle = {
-    WebkitLineClamp: 4,
-    WebkitBoxOrient: 'vertical',
-    overflow: 'hidden',
-    display: '-webkit-box',
-  }
-
   return (
-    <div className='about-skills-container'>
-      <div className='about'>
-        <h1>MY STORY</h1>
-        <p style={isOpen ? null : paragraphStyle}>
-          Hey there👋I delved into the world of coding during my Master's Degree in Audio Engineering back in 2019 where I got my first taste of coding in C++ while working on an audio effect project. Despite creating a cool delay effect that I enjoyed building, I’ve realised that coding might not be my true calling. This awareness dawned upon me when my teacher emphasized the importance of having a strong grasp of complex mathematics in the programming field.
-          <br/><br/>Fast forward two years after finishing my master's, I decided to give coding another shot. I took a free course on learning Python on LinkedIn and thought, "Maybe I'll like this." But, once again, I hit a roadblock with complex math operations when I tried learning Audio Digital Signal Processing in Phyton. 
-          <br/><br/>Then, in December 2022, I stumbled upon a mobile app called Mimo, and everything changed. I started learning Front-End Development, covering the basics like loops, if statements, and functions. A month later, I joined their 6-month Front-End Development bootcamp.
-          During the bootcamp, I dove into HTML, CSS, JavaScript, and React.<br/><br/>It was awesome! I built a bunch of projects, and six months later, I realised that my love for coding and creating applications bring me joy and satisfaction.
-          Since then, I've kept learning and developing my skills as well as developing applications.<br/><br/> So, that's a bit about my coding journey so far. I'm thrilled about the progress I've made, and I'm eagerly looking forward to the next chapter. If you're on the lookout for a passionate front-end developer who loves bringing ideas to life, I'm your guy! Let's connect and create something awesome together. Cheers! 🚀
-        </p>
-        <button onClick={() => setIsOpen(!isOpen)}>{isOpen ? 'Read Less...' : 'Read More...'}</button>
-      </div>
-      <div className='skills'>
-        <h1>TECH STACK</h1>
-        <div className='stack'>
-          <section>
-            <FaHtml5/>
-            <h5>HTML</h5>
-          </section>
-          <section>
-            <FaCss3Alt/>
-            <h5>CSS</h5>
-          </section>
-          <section>
-            <SiJavascript/>
-            <h5>JavaScript</h5>
-          </section>
-          <section>      
-            <FaReact/>
-            <h5>React</h5>
-          </section>
-          <section>
-            <FaNode/>
-            <h5>Node.JS</h5>
-          </section>
-          <section>
-            <SiMongodb/>
-            <h5>MongoDB</h5>
-          </section>
-          <section>
-            <SiExpress/>
-            <h5>Express.JS</h5>
-          </section>
-          <section>
-            <SiPostman/>
-            <h5>Postman</h5>
-          </section>
-          <section>
-            <FaGitAlt/>
-            <h5>GIT</h5>
-          </section>
-          <section>
-            <FaFigma/>
-            <h5>Figma</h5>
-          </section>
-          <section>
-            <FaNpm/>
-            <h5>Node Package Manager</h5>
-          </section>
-        </div>
-      </div>
+    <div className='skills'>
+      <h1>TECH STACK</h1>
+        <ul className="skills-content">
+          <li>
+            <img src={htmlLogo} alt='HTML Logo' width={70} height={70} title='HTML — markup language for web pages' />
+            <p>HTML</p>
+          </li>
+          <li>
+            <img src={cssLogo} alt='CSS Logo' width={70} height={70} title='CSS — styles and layout for the web' />
+            <p>CSS</p>
+          </li>
+          <li>
+            <img src={sassLogo} alt='Sass Logo' width={90} height={70} title='Sass — CSS preprocessor with variables & mixins' />
+            <p>Sass</p>
+          </li>
+          <li>
+            <img src={jsLogo} alt='JavaScript Logo' width={90} height={70} title='JavaScript — programming language of the web' />
+            <p>JavaScript</p>
+          </li>
+          <li>
+            <img src={tsLogo} alt='TypeScript Logo' width={120} height={70} title='TypeScript — typed superset of JavaScript' />
+            <p>TypeScript</p>
+          </li>
+          <li>
+            <img src={jqueryLogo} alt='jQuery Logo' width={70} height={70} title='jQuery — DOM manipulation utility library' />
+            <p>jQuery</p>
+          </li>
+          <li>
+            <img src={reactLogo} alt='React Logo' width={70} height={70} title='React — UI library for building components' />
+            <p>React</p>
+          </li>
+          <li>
+            <img src={nodeLogo} alt='Node.js Logo' width={110} height={70} title='Node.js — JavaScript runtime on the server' />
+            <p>Node.js</p>
+          </li>
+          <li>
+            <img src={expressLogo} alt='Express Logo' width={70} height={70} title='Express.js — minimalist Node.js web framework' />
+            <p>Express.js</p>
+          </li>
+          <li>
+            <img src={nextLogo} alt='Next.js Logo' width={70} height={70} title='Next.js — React framework for apps & sites' />
+            <p>Next.js</p>
+          </li>
+          <li>
+            <img src={handlebarsLogo} alt='Handlebars Logo' width={70} height={70} title='Handlebars — templating engine for HTML' />
+            <p>Handlebars</p>
+          </li>
+          <li>
+            <img src={mongoLogo} alt='MongoDB Logo' width={60} height={70} title='MongoDB — NoSQL document database' />
+            <p>MongoDB</p>
+          </li>
+          <li>
+            <img src={graphqlLogo} alt='GraphQL Logo' width={55} height={70} title='GraphQL — API query language & runtime' />
+            <p>GraphQL</p>
+          </li>
+          <li>
+            <img src={sqlLogo} alt='SQL Logo' width={70} height={70} title='SQL — relational database query language' />
+            <p>SQL</p>
+          </li>
+          <li>
+            <img src={gcpLogo} alt='GCP Logo' width={100} height={70} title='Google Cloud — cloud services platform' />
+            <p>Google Cloud Platform</p>
+          </li>
+          <li>
+            <img src={postmanLogo} alt='Postman Logo' width={80} height={70} title='Postman — API client for testing and docs' />
+            <p>Postman</p>
+          </li>
+          <li>
+            <img src={playwrightLogo} alt='Playwright Logo' width={80} height={80} title='Playwright — end‑to‑end testing framework' />
+            <p>Playwright</p>
+          </li>
+          <li>
+            <img src={jestLogo} alt='Jest Logo' width={80} height={70} title='Jest — JavaScript testing framework' />
+            <p>Jest</p>
+          </li>
+          <li>
+            <img src={figmaLogo} alt='Figma Logo' width={80} height={70} title='Figma — collaborative UI design tool' />
+            <p>Figma</p>
+          </li>
+          <li>
+            <img src={adobeXdLogo} alt='Adobe XD Logo' width={70} height={70} title='Adobe XD — UI/UX design and prototyping' />
+            <p>Adobe XD</p>
+          </li>
+          <li>
+            <img src={gitLogo} alt='Git Logo' width={70} height={70} title='Git — distributed version control system' />
+            <p>Git</p>
+          </li>
+          <li>
+            <img src={githubLogo} alt='GitHub Logo' width={65} height={70} title='GitHub — Git hosting and collaboration' />
+            <p>GitHub</p>
+          </li>
+          <li>
+            <img src={viteLogo} alt='Vite Logo' width={110} height={70} title='Vite — fast frontend build tool/dev server' />
+            <p>Vite</p>
+          </li>
+          <li>
+            <img src={webpackLogo} alt='Webpack Logo' width={70} height={70} title='Webpack — module bundler' />
+            <p>Webpack</p>
+          </li>
+      </ul>
     </div>
   )
 }
