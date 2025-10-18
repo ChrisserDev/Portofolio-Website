@@ -54,10 +54,10 @@ a {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  height: 90vh;
+  height: 80vh;
 }
 
-.homePage-container > img{
+.homePage-container > img {
   width: 360px;
   height: 360px;
   border-radius: 20px;
@@ -73,6 +73,7 @@ a {
 
 
 .introduction {
+  width: 60%;
   align-self: center;
   font-size: 2rem;
   padding-bottom: 2em;
@@ -91,18 +92,28 @@ a {
 }
 
 .introduction h1 {
-  display: inline-block;
+  display: block;
   transition: color 0.3s, transform 0.3s;
+  line-height: 70px;
+}
+
+.desc-skill {
+  color: #ffcc00;
+  font-weight: bold;
+}
+
+.introduction p {
+  font-size: 1.1rem;
 }
 
 .introduction h1:hover {
   transform: scale(1.1);
 }
 
-.introduction > a:nth-child(4),
-.introduction > a:nth-child(5) {
+.introduction > a:first-of-type,
+.introduction > a:nth-of-type(2) {
   display: inline-block;
-  padding: 0.4em 1em;
+  padding: 0.5em 1em;
   border-radius: 10px;
   cursor: pointer;
   margin-top: 1.5em;
@@ -110,10 +121,10 @@ a {
   transition: background-color 0.3s, color 0.3s, border 0.3s;
 }
 
-.introduction > a:nth-child(4) {
-  background: linear-gradient(40deg, #ffcc00, #ff6666);
+.resume-link {
+  background: #ffcc00;
   color: rgb(41, 38, 38);
-  margin-right: 2.5em;
+  margin-left: 1rem;
 }
 
 .introduction > a:nth-child(5) {
@@ -126,7 +137,7 @@ a {
   color: white;
 }
 
-.introduction > a:nth-child(4):hover{
+.resume-link:hover{
   color: white;
   box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.7);
   border: none;
@@ -134,41 +145,11 @@ a {
 
 /* ABOUT SECTION */
 
-.about {
-  padding: 0 5em;
-}
-
-.about > p {
-  padding: .5em 5em 1.2em 5em;
-  font-size: 1.4rem;
-}
-
-.about h1 {
-  text-align: center;
-  padding: .2em 0;
-  margin: 1.2em 2.8em;
-}
-
-.about > h1, .skills > h1, .projects-container-title {
-  background-image: linear-gradient(40deg, #ffcc00, #ff6666);
+.skills > h1, 
+.projects-container-title {
+  background-color: #ffcc00;
   filter: brightness(90%);
   color: rgb(16, 15, 15);
-}
-
-.about > button { 
-  border: none;
-  border-radius: 4px;
-  padding: .5em;
-  color: black;
-  background-color: white;
-  cursor: pointer;
-  margin: .5em 0 0 8.5em;
-  font-family: inherit;
-}
-
-.about > button:hover {
-  color: white;
-  background-color: #2a2a2a; 
 }
 
 /* SKILLS SECTION */
@@ -204,13 +185,40 @@ a {
   font-size: 3.2rem;
 }
 
+.skills-content {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-auto-flow: column;
+  gap: 40px;
+  margin-top: 2em;
+  list-style: none;
+  align-items: center;
+  justify-items: center;
+}
+
+.skills-content > * {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills-content li p {
+  margin-top: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
 /* PROJECTS SECTION */
 
 .projects-container{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin: 0 11em 4em 11em;
+  margin: 0 6em 4em 6em;
   gap: 80px 50px;
 }
 
@@ -235,15 +243,14 @@ a {
 
 .project-card img {
   width: 540px;
-  height: 240px;
+  height: 100%;
+  max-height: 240px;
   border-radius: 2px 2px 0 0;
   transition: transform 0.3s ease-in-out;
 }
 
 .projects-container-title {
   text-align: center;
-  color: #2a2a2a;
-  background-color: white;
   padding: .2em 0;
   margin: 2em 5.5em;
 }
@@ -252,34 +259,6 @@ a {
   padding: 0 .6em;
   line-height: 1.5em;
   font-size: 1.1rem;
-}
-
-.project-card img:hover {
-  transform: scale(1.01);
-  opacity: 0;
-}
-
-.overlay {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 240px;
-  background: rgba(0, 0, 0, 0.7);
-  color: #fff;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-  border-radius: 2px 2px 0 0;
-  border: 1.5px solid #fff;
-  cursor: pointer;
-  font-size: 1.2rem;
-}
-
-.overlay:hover {
-  opacity: 1;
 }
 
 .project-card-top {
@@ -307,15 +286,18 @@ a {
 
 .projects-stack {
   display: flex;
+  background-color: white;
   gap: 10px;
   padding: 1em;
 }
 
 .projects-stack > p{
-  background: linear-gradient(40deg, #ffcc00, #ff6666);
+  background:  #ffcc00;
   color: #494646;
   padding: .2em .5em;
   border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
 }
 
 .project-page { 
@@ -333,37 +315,8 @@ a {
   line-height: 1.5em;
 }
 
-.features > h4, .modal-project > h2, .introduction h1, .contact-container > h3{
-  background-image: linear-gradient(40deg, #ffcc00, #ff6666);
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.modal-project {
-  position: relative;
-  background-color: #2a2a2a;
-  padding: 0 1em;
-}
-
-.modal-project > h2 {
-  text-align: center;
-  padding: 1em 0;
-}
-
-.close-modal {
-  position: absolute;
-  top: 2%;
-  left: 95%;
-  font-size: 1.6rem;
-  background-color: transparent;
-  border: none;
-  color: white;
-  z-index: 1;
-}
-
-.close-modal:hover {
-  cursor: pointer;
-  color: #adadad;
+.features > h4, .introduction h1, .contact-container > h3{
+  color: #ffcc00;
 }
 
 /* CONTACT SECTION */
@@ -441,25 +394,25 @@ a {
     padding: 0.5em 1.7em;
   }
 
+  .introduction h1 {
+    line-height: 50px;
+  }
+
   .menu > a {
    padding: 0.5em; 
    font-size: .8rem;
   }
 
-  .about {
-    padding: 0;
-  }
-
-  .about > p {
-    padding: 2em 4em;
-  }
-
-  .about > button {
-    margin: .5em 6.7em;
+  .skills-content {
+    grid-template-rows: repeat(6, 1fr);
   }
 
   .skills {
     margin: 0 5.8em;
+  }
+
+  .introduction p {
+    font-size: 1rem;
   }
 
   .stack {
@@ -496,16 +449,6 @@ a {
   .contact-container {
     margin: 2em 0;
   }
-
-  .modal-project {
-    height: 90vh;
-    color: black;
-    background-color: white;
-  }
-
-  .close-modal {
-    color: black;
-  }
 }
 
 @media (max-width: 426px){
@@ -513,27 +456,35 @@ a {
   .homePage-container {
     display: flex;
     flex-direction: column;
+    height: auto;
   }
 
   .homePage-container > img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+    display: none;
+  }
+
+  .introduction h1 {
+    line-height: 40px;
+  }
+
+   .introduction h3 {
+    font-size: 1.8rem;
+    margin: 1rem 0;
+   }
+
+  .skills-content {
+    grid-template-rows: repeat(8, 1fr);
+    gap: 10px;
+  }
+
+  .skills-content li p {
+    font-size: 1rem;
   }
 
   .introduction {
-    padding: 0 2em;
+    width: 90%;
     font-size: 1rem;
-  }
-
-  .about > p {
-    font-size: 1rem;
-    padding: 2em;
-  }
-
-  .about > button {
-    margin: .5em 2.4em;
-    padding: .2em;
+    padding-top: 2rem;
   }
 
   .skills {
@@ -546,10 +497,6 @@ a {
 
   .about > h1, .skills > h1, .projects-container-title {
     font-size: 1.5rem;
-  }
-  
-  .about > h1 {
-    margin: 0 1.4em;
   }
 
   .stack {
