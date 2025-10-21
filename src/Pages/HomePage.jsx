@@ -38,7 +38,7 @@ export default function HomePage() {
             If you'd like to see what I've been working on, follow my work log on <span><a className='github-link desc-skill' href="https://github.com/ChrisserDev" target='_blank' aria-label="Link to my personal Github profile" title="Link to my personal Github profile">Github</a></span> and updates on <span><a className='linkedin-link desc-skill' href="https://www.linkedin.com/in/cristianserban24/"  target='_blank' aria-label="Link to my personal Linkedin profile" title="Link to my personal Linkedin profile">LinkedIn</a></span> where I share progress, small wins, and experiments as I keep building and learning.
           </p>
           <Link to="projects" smooth={true} duration={500}>Browse Projects</Link>
-          <a className='resume-link' href="https://drive.google.com/file/d/1ijLlXDrzKpz0wfh1-bffzbGKtuxrDd4-/view?usp=sharing" target='_blank' rel="noopener noreferrer" aria-label='Link to Cristian Resume.'>Resume</a>
+          <a className='resume-link' href="https://drive.google.com/file/d/126djPfCD_RtTBPb2koJ4rmiaWoVzFfWV/view?usp=sharing" target='_blank' rel="noopener noreferrer" aria-label='Link to Cristian Resume.'>Resume</a>
           </section>
           <img src={myself} alt="Image of Cristian Serban"/>
         </div>
