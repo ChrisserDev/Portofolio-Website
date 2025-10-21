@@ -55,6 +55,9 @@ a {
   justify-content: space-evenly;
   align-items: center;
   height: 80vh;
+  @media screen and (min-width: 1026px) {
+    margin: 0 6rem;
+  }
 }
 
 .home-page-description {
@@ -624,10 +627,6 @@ a {
 
   .scroll-text, .mouse-icon {
     font-size: .6rem;
-  }
-
-  .introduction > a:nth-child(4), .introduction > a:nth-child(5) {
-    font-size: .8rem;
   }
 }
 
